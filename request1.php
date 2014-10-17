@@ -32,10 +32,11 @@ $ip = "unknown";
 return($ip); 
 }
 $aa=explode(",",GetIP());
+echo $aa[0];
 @$json=file_get_contents('http://ip.taobao.com/service/getIpInfo.php?ip='.$aa[0]);
 @$arr=json_decode($json);
 
-if(preg_match("/贵州/",@$arr->data->region)==1)
+if(preg_match("/贵州/",@$arr->data->region)==1 || preg_match("/重庆/",@$arr->data->region)==1)
 {
 	echo 'hyipcb(0);';
 }
