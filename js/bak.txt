@@ -1,0 +1,14 @@
+var d=document;
+(function(){
+	function getQueryString(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) return unescape(r[2]); return null;
+	}
+	if(getQueryString("f") && getQueryString("f").indexOf("kuping")>-1){
+		var t=Math.random();
+		if(t>0.8) return;
+	}
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffcb3a0ce09f78eb558ba19d339861669' type='text/javascript'%3E%3C/script%3E"));
+})()

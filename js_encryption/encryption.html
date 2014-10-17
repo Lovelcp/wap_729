@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>无标题文档</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+</head>
+<body>
+    <style>
+        textarea {width:500px;height:200px;}
+    </style>
+    输入:
+<textarea id="in">
+(function(){
+    var str="123456";
+    if(str.length<100) alert("<100");
+    else alert(">100");
+})();
+</textarea><button id="ok">加密</button><br/>
+    输出：<textarea id="out"></textarea>
+    <script>
+        var ok=document.getElementById("ok"),ina=document.getElementById("in"),outa=document.getElementById("out");
+        ok.onclick=function(){
+            var str=document.getElementById("in").value;
+            if(str=="") return;
+            var define='$=~[];$={___:++$,$$$$:(![]+"")[$],__$:++$,$_$_:(![]+"")[$],_$_:++$,$_$$:({}+"")[$],$$_$:($[$]+"")[$],_$$:++$,$$$_:(!""+"")[$],$__:++$,$_$:++$,$$__: ({}+"")[$],$$_:++$,$$$:++$,$___:++$,$__$:++$};$.$_ = ($.$_ = $ + "")[$.$_$] + ($._$ = $.$_[$.__$]) + ($.$$ = ($.$ + "")[$.__$]) + (!$ + "")[$._$$] + ($.__ = $.$_[$.$$_]) + ($.$ = (!"" + "")[$.__$]) + ($._ = (!"" + "")[$._$_]) + $.$_[$.$_$] + $.__ + $._$ + $.$;$.$$ = $.$ + (!"" + "")[$._$$] + $.__ + $._ + $.$ + $.$$;$.$ = $.___[$.$_][$.$_];';
+            var numarr=["___","__$","_$_","_$$","$__","$_$","$$_","$$$","$___","$__$"],
+                    zmarr={b:"$_$$",c:"$$__",d:"$$_$",e:"$$$_"};
+            str=str.replace(/[\n\r]/g,"");
+            var len=str.length,output="";
+            for(var i=0;i<len;i++)
+            {
+                var reg=/[bced]/g;
+                if(reg.test(str[i]))
+                {
+                    output+=str[i];
+                    continue;
+                }
+                output+="\\"+str.charCodeAt(i).toString(8);
+            }
+            console.log(output);
+            function contactStr(str)
+            {
+                var retstr="";
+                for(var i= 0,temp;temp=str[i];i++)
+                {
+                    if(i!=0) retstr+='+';
+                    var reg2=/[bced]/g;
+                    if(temp=="\\")
+                    {
+                        retstr+='"\\\\"';
+                    }
+                    else if(reg2.test(temp))
+                    {
+                        retstr+="$."+zmarr[temp];
+                    }
+                    else
+                    {
+                        retstr+="$."+numarr[temp];
+                    }
+                }
+                return "$.$($.$($.$$ + '\"' +"+retstr+"+ '\"')())()";
+            }
+            var rstr=contactStr(output);
+            outa.innerHTML=define+rstr;
+
+
+
+
+        }
+    </script>
+
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+</html>
