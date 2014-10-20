@@ -1,0 +1,145 @@
+----------------------------统计查询信息-----------------------------------
+
+百度统计
+http://tongji.baidu.com
+user:话语科技网站
+pass:HY123456kj
+
+cpc uv
+
+http://click.shuiguo.com/index.php?date=20140824&action=out&method=main&f=all
+
+网页统计
+http://click.shuiguo.com/start/
+
+激情播吧625流量查询
+地址：http://new.cnzz.com/v1/login.php?siteid=1253202217 
+密码：a123456
+
+-----------------------------游戏数据查询信息-------------------------------
+p2
+http://202.91.246.39:7000/index.php/Index/logs
+10C352
+10C352
+
+p1
+统计地址:  http://zxprod.zhxone.com/channel.php?code=11292
+用户名： JxViEz
+密码:  kAEehr
+
+午夜视频
+http://222.186.10.125:7000/index.php/Public/login
+sub9
+sub9
+
+书旗小说
+登陆地址：http://union.uc.cn
+用户名：cqhuayu
+密码：cxhFpkic
+
+360浏览器
+http://lianmeng.360.cn/
+账号：xixihaha
+密码：xxhh2013
+
+
+雷电战机  =》雷电2014
+http://az.106dz.com:9448/admin/settlement/login.php
+账号：plane34181
+密码：uuuade
+
+果盟      =》果盟-捕鱼黄金沙  果盟-暴击cpa   果盟-天天赛车
+地址：http://www.guomob.com/index.php/Home-Index-login
+账号：64041587@Qq.com
+密码：shuiguo.com
+
+偶玩	  
+地址：http://qudao.umipay.com/accounts/login/
+
+帐号1：shuiguo	=》有米-功夫熊猫  有米-消灭星星 有米-全民暴击  有米-雷霆传说 有米-街头激战
+密码：shuiguo123
+35*
+
+账号2：shuiguo2 =》有米-捕鱼去哪儿  
+密码：shuiguo123
+30%
+
+
+激情播吧：
+地址：http://ppcool.com.cn:7002/mmdeploy/
+
+账号：mmys_cpa_comh513	=》激情播吧513
+密码：Huayu888
+
+账号：mmys_cpa_comf612	=》激情播吧612
+密码：12345678
+
+账号：mmys_cpa_comf625	=》激情播吧625
+密码：12345678
+
+账号：mmys_cpa_come799	=》激情播吧799
+密码：12345678
+
+私影播吧： =》私影播吧
+地址：http://112.124.29.103/tongji/main.html  
+帐号：fcsj003
+密码：123456 2.0
+
+
+
+娇羞小苹果  =》小苹果
+地址：http://www.space-sh.com/admin/
+账号：shuiguo
+密码：123456
+
+
+刘康渠道
+地址：http://ngsteam.xinyinhe.com/smspay/admin/login.jsp
+
+渠道1： =》LK-疯狂糖果 LK-求生之路 Lk-天天爱闯关
+渠道选择：重庆话语y 
+
+账号：huayuy1
+密码：7Ti6Dc8W
+
+渠道2   =》LK-疯狂糖果2
+账号：huayuy2 
+密码：7Ti6Dc82
+
+
+神奇影院   =》神奇影院
+地址：http://116.90.83.227/stat_data/user.jsp
+账号：admin505
+密码：admin505
+单价：1.6
+
+水果雷电  ----》水果雷电（暂无数据）
+地址：http://112.124.96.143:50000/
+账号：quwan
+密码：123456
+收入：* 0.7 * 0.7
+
+
+海马（4元）  =》IOS-海马助手2
+地址：http://qdtj.haima.me/login.aspx
+账号：cpapz
+密码：A123456
+
+创新海马   =》IOS-创新海马
+地址：http://qdtj.haima.me/login.aspx
+账号：cpacxmx13
+密码：123456
+
+创新快播   =》IOS-创新快播
+地址：http://qvod.haoyi.com:8088/
+账号：jiangxi47
+密码：e4o04x
+
+-----------------------中涛返回-------------------
+
+百度广告	=》百度广告
+
+奇豆快播私密版	=》IOS-快播私密版
+
+奇豆海马（老海马 3元海马）	=》IOS-海马助手
+
