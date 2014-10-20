@@ -34,17 +34,20 @@
 	<div>
 		<a id="tag_302" href="http://www.haima.me/?c=cpapz"></a>
 		<script>
+		var lhref="";
 		(function(){
 			var h=["http://www.haima.me/?c=cpapz","http://www.haima.me/?c=cpapz01"],img=["http://www.shuiguo.com/public/new/images/adv.jpg","http://www.shuiguo.com/public/new/images/adv.jpg"];
 			if(Math.random()>0.1)
 			{
 				document.getElementById("tag_302").setAttribute("href",h[0]);
 				document.getElementById("tag_302").innerHTML='<img id="img_1" style="width:100%;" src="'+img[0]+'" />';
+				lhref=h[0];
 			}
 			else
 			{
 				document.getElementById("tag_302").setAttribute("href",h[1]);
 				document.getElementById("tag_302").innerHTML='<img id="img_1" style="width:100%;" src="'+img[1]+'" />';
+				lhref=h[1];
 			}
 		})()
 		//http://www.haima.me/tg/cpacxmx13
@@ -59,7 +62,7 @@
 
 		window.onload=function(){
 			if( /ipad|iphone|ipod/i.test(navigator.userAgent) ){
-				window.location.href="http://www.haima.me/?c=cpapz";
+				window.location.href=lhref;
 			}
 		}
 
