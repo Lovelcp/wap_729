@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="fdf17414-0ace-4ac0-9502-ad9a31c58017" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/d1.jpg" afterPath="$PROJECT_DIR$/images/d1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/d2.jpg" afterPath="$PROJECT_DIR$/images/d2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/d3.jpg" afterPath="$PROJECT_DIR$/images/d3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/d4.jpg" afterPath="$PROJECT_DIR$/images/d4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/d5.jpg" afterPath="$PROJECT_DIR$/images/d5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/d6.jpg" afterPath="$PROJECT_DIR$/images/d6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bind.js" afterPath="$PROJECT_DIR$/js/bind.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/send.js" afterPath="$PROJECT_DIR$/js/send.js" />
     </list>
     <ignored path="wap_729.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +36,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="31" selection-start="4203" selection-end="4203" vertical-scroll-proportion="-0.42635658">
+            <state line="52" column="31" selection-start="2581" selection-end="2581" vertical-scroll-proportion="-6.96">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hy_cpc_print_close.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js_encryption/hy_cpc_print_close.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="396" column="9" selection-start="0" selection-end="12422" vertical-scroll-proportion="0.26199263">
+              <folding>
+                <marker date="1413783660944" expanded="false" signature="4815:4883" placeholder="..." />
+                <marker date="1413783660944" expanded="false" signature="5104:5172" placeholder="..." />
+                <marker date="1413783660944" expanded="false" signature="5495:5563" placeholder="..." />
+                <marker date="1413783660944" expanded="false" signature="5768:5836" placeholder="..." />
+                <marker date="1413783660944" expanded="false" signature="5895:6105" placeholder="..." />
+                <marker date="1413783660944" expanded="false" signature="6159:6309" placeholder="..." />
+                <marker date="1413783660944" expanded="false" signature="6362:6374" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,12 +83,15 @@
       <list>
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js_encryption/hy_cpc_print_close.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1358" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -119,6 +148,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js_encryption" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap_729" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap_729" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -129,7 +172,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="F:/ndjs/helloworld" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
   </component>
@@ -164,6 +207,24 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\newa\s3\shuiguo\static_pages\site2.0\wap_729" />
+          <option name="myCopyRoot" value="F:\newa\s3\shuiguo\static_pages\site2.0\wap_729" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\newa\s3\shuiguo\static_pages\site2.0\wap_729" />
+          <option name="myCopyRoot" value="F:\newa\s3\shuiguo\static_pages\site2.0\wap_729" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fdf17414-0ace-4ac0-9502-ad9a31c58017" name="Default" comment="" />
@@ -173,13 +234,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1358" height="728" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24943139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24869695" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -257,6 +318,20 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="39" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
           <folding />
         </state>
@@ -271,8 +346,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="31" selection-start="4203" selection-end="4203" vertical-scroll-proportion="-0.42635658">
+        <state line="52" column="31" selection-start="2581" selection-end="2581" vertical-scroll-proportion="-6.96">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js_encryption/hy_cpc_print_close.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="396" column="9" selection-start="0" selection-end="12422" vertical-scroll-proportion="0.26199263">
+          <folding>
+            <marker date="1413783660944" expanded="false" signature="4815:4883" placeholder="..." />
+            <marker date="1413783660944" expanded="false" signature="5104:5172" placeholder="..." />
+            <marker date="1413783660944" expanded="false" signature="5495:5563" placeholder="..." />
+            <marker date="1413783660944" expanded="false" signature="5768:5836" placeholder="..." />
+            <marker date="1413783660944" expanded="false" signature="5895:6105" placeholder="..." />
+            <marker date="1413783660944" expanded="false" signature="6159:6309" placeholder="..." />
+            <marker date="1413783660944" expanded="false" signature="6362:6374" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
