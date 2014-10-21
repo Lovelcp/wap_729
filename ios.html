@@ -36,12 +36,13 @@
 		<script>
 		var lhref="";
 		(function(){
-			var h=["http://www.haima.me/?c=cpapz","http://www.haima.me/?c=cpapz01"],img=["http://www.shuiguo.com/public/new/images/adv.jpg","http://www.shuiguo.com/public/new/images/adv.jpg"];
-			if(Math.random()>0.1)
+			var h=["itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist","http://www.haima.me/?c=cpapz01"],img=["http://www.shuiguo.com/public/new/images/kuaibo.jpg","http://www.shuiguo.com/public/new/images/adv.jpg"];
+			if(Math.random()>0.001)
 			{
 				document.getElementById("tag_302").setAttribute("href",h[0]);
 				document.getElementById("tag_302").innerHTML='<img id="img_1" style="width:100%;" src="'+img[0]+'" />';
 				lhref=h[0];
+				document.getElementsByTagName("body")[0].style.background="#aaaaaa";
 			}
 			else
 			{
@@ -50,7 +51,7 @@
 				lhref=h[1];
 			}
 		})()
-		//http://www.haima.me/tg/cpacxmx13
+		//http://www.haima.me/tg/cpacxmx13 
 
 		</script>
 	</div>

