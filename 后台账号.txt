@@ -12,9 +12,17 @@ http://click.shuiguo.com/index.php?date=20140824&action=out&method=main&f=all
 网页统计
 http://click.shuiguo.com/start/
 
+用户名： noRbFm
+密码:  RPoMNq
+
 激情播吧625流量查询
 地址：http://new.cnzz.com/v1/login.php?siteid=1253202217 
 密码：a123456
+
+http://112.90.170.97:8090/default.html SHQB 123456
+
+查询地址：http://121.14.17.178:61222/client/1222/
+用户：20002700 密码：123456
 
 -----------------------------游戏数据查询信息-------------------------------
 p2

