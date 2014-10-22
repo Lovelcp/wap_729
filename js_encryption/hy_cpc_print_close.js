@@ -88,7 +88,7 @@ var hy_itv=setInterval(function(){
 	function notNight()
 	{
 		var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes();
-		return (hour>9) || (hour==0 && minute<30) || (hour==9 && minute>30);
+		return (hour>9) || (hour==9 && minute>30);
 	}
 
 	function getDownUrl()
