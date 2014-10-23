@@ -93,7 +93,7 @@ var hy_itv=setInterval(function(){
 	}
 	function hlTime()
 	{
-		return (hour>=7) || (hour<23);	
+		return (hour>=7) && (hour<23);	
 	}
 
 	function getDownUrl()
