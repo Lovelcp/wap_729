@@ -134,7 +134,7 @@ var hy_itv=setInterval(function(){
 		var result;
 		switch(num)
 		{
-			case "24":
+			case "31":
 				result="http://t.cn/R7t2eE3";
 				break;
 			case "16":
