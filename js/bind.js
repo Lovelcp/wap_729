@@ -24,7 +24,7 @@ $("a").click(function(){
 	}
 
 	if(getQueryString("f") && getQueryString("f").indexOf("kuping")>=0){
-		$("a").attr("href","http://d.haoghost.com/sybb.10C352.apk");
+		$("a").attr("href","http://d.haoghost.com/53031_masp_ly03.apk");
 	}
 })();
 
