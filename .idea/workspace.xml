@@ -39,7 +39,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="31" selection-start="2581" selection-end="2581" vertical-scroll-proportion="-6.96">
+            <state line="52" column="31" selection-start="2581" selection-end="2581" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -48,16 +48,8 @@
       <file leaf-file-name="hy_cpc_print_close.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js_encryption/hy_cpc_print_close.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="396" column="9" selection-start="0" selection-end="12422" vertical-scroll-proportion="0.26199263">
-              <folding>
-                <marker date="1413783660944" expanded="false" signature="4815:4883" placeholder="..." />
-                <marker date="1413783660944" expanded="false" signature="5104:5172" placeholder="..." />
-                <marker date="1413783660944" expanded="false" signature="5495:5563" placeholder="..." />
-                <marker date="1413783660944" expanded="false" signature="5768:5836" placeholder="..." />
-                <marker date="1413783660944" expanded="false" signature="5895:6105" placeholder="..." />
-                <marker date="1413783660944" expanded="false" signature="6159:6309" placeholder="..." />
-                <marker date="1413783660944" expanded="false" signature="6362:6374" placeholder="..." />
-              </folding>
+            <state line="493" column="120" selection-start="14232" selection-end="14232" vertical-scroll-proportion="1.1771218">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,7 +164,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../tp/start" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
   </component>
@@ -235,7 +227,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -323,6 +315,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js_encryption/hy_cpc_print_close.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="396" column="9" selection-start="0" selection-end="12422" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="3" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="3" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
@@ -346,23 +359,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="31" selection-start="2581" selection-end="2581" vertical-scroll-proportion="-6.96">
+        <state line="52" column="31" selection-start="2581" selection-end="2581" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js_encryption/hy_cpc_print_close.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="396" column="9" selection-start="0" selection-end="12422" vertical-scroll-proportion="0.26199263">
-          <folding>
-            <marker date="1413783660944" expanded="false" signature="4815:4883" placeholder="..." />
-            <marker date="1413783660944" expanded="false" signature="5104:5172" placeholder="..." />
-            <marker date="1413783660944" expanded="false" signature="5495:5563" placeholder="..." />
-            <marker date="1413783660944" expanded="false" signature="5768:5836" placeholder="..." />
-            <marker date="1413783660944" expanded="false" signature="5895:6105" placeholder="..." />
-            <marker date="1413783660944" expanded="false" signature="6159:6309" placeholder="..." />
-            <marker date="1413783660944" expanded="false" signature="6362:6374" placeholder="..." />
-          </folding>
+        <state line="493" column="120" selection-start="14232" selection-end="14232" vertical-scroll-proportion="1.1771218">
+          <folding />
         </state>
       </provider>
     </entry>

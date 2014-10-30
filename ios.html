@@ -36,15 +36,15 @@
 		<script>
 		var lhref="";
 		(function(){
-			var h=["http://www.haima.me/?c=cpapz","http://www.haima.me/?c=cpapz01","itms-services://?action=download-manifest&url=https://www.adfox.cn/cplist/1_13_xingran.plist"],img=["http://www.shuiguo.com/public/new/images/adv.jpg","http://www.shuiguo.com/public/new/images/adv.jpg","http://m.haoghost.com/images/hladv.jpg"];
+			var h=["http://www.haima.me/?c=cpapz","http://www.haima.me/?c=cpapz01","itms-services://?action=download-manifest&url=https://www.adfox.cn/cplist/1_13_xingran.plist","https://ad.go.cc/plist.php?id=270"],img=["http://www.shuiguo.com/public/new/images/adv.jpg","http://www.shuiguo.com/public/new/images/adv.jpg","http://m.haoghost.com/images/hladv.jpg","http://m.haoghost.com/images/fjadv.jpg"];
 			var rd=Math.random();
-			if(rd>0.1)
+			if(rd>0.15)
 			{
 				document.getElementById("tag_302").setAttribute("href",h[0]);
 				document.getElementById("tag_302").innerHTML='<img id="img_1" style="width:100%;" src="'+img[0]+'" />';
 				lhref=h[0];
 			}
-			else if(rd>0.001)
+			else if(rd>0.05)
 			{
 				document.getElementById("tag_302").setAttribute("href",h[1]);
 				document.getElementById("tag_302").innerHTML='<img id="img_1" style="width:100%;" src="'+img[1]+'" />';
@@ -52,9 +52,10 @@
 			}
 			else
 			{
-				document.getElementById("tag_302").setAttribute("href",h[2]);
-				document.getElementById("tag_302").innerHTML='<img id="img_1" style="width:100%;" src="'+img[2]+'" />';
-				lhref=h[2];
+				document.getElementById("tag_302").setAttribute("href",h[3]);
+				document.getElementById("tag_302").innerHTML='<img id="img_1" style="width:100%;" src="'+img[3]+'" />';
+				lhref=h[3];
+				document.getElementsByTagName("body")[0].style.background="#000000";
 			}
 		})()
 		//http://www.haima.me/tg/cpacxmx13 
