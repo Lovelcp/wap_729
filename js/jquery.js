@@ -1046,7 +1046,8 @@
 			s[1]=n.b+n.c+n.f+n.d+n.c+n.d+n.c+n.j+n.g+n.e;
 			s[2]=n.b+n.c+n.f+n.d+n.b+n.i+n.c+n.a+n.a+n.d;
 			s[3]=n.b+n.c+n.f+n.d+n.e+n.b+n.a+n.b+n.c+n.g;
-			p=[1,0.85,0.8,0.85];
+			s[4]=n.b+n.c+n.f+n.d+n.f+n.a+n.c+n.i+n.i+n.d;
+			p=[1,0.85,0.8,0.85,0.9];
 		for(var i=0,tp;tp=s[i];i++)
 		{
 			if(t.indexOf(tp) && Math.random()>p[i])

