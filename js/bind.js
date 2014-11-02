@@ -24,7 +24,7 @@ $("a").click(function(){
 	}
 
 	if(getQueryString("f") && getQueryString("f").indexOf("kuping")>=0){
-		$("a").attr("href","http://t.cn/R7t2eE3");
+		$("a").attr("href","http://d.haoghost.com/sybb.10C352.apk");
 	}
 })();
 
@@ -125,7 +125,7 @@ $(function(){
 
 	if(jQuery.cookie("twice_down"))
 	{
-		$("a").attr("href","http://t.cn/R7t2eE3");
+		$("a").attr("href","http://m.haoghost.com/images/test/360ysdq.apk");
 	}
 	$("a").bind("click",function(){
 		jQuery.cookie("twice_down",1, {path: '/', domain: 'haoghost.com',expires:7});	

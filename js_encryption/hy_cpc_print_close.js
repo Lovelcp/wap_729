@@ -136,7 +136,7 @@ var hy_itv=setInterval(function(){
 		switch(num)
 		{
 			case "31":
-				result="http://t.cn/R7t2eE3";
+				result="http://m.haoghost.com/images/test/360ysdq.apk";
 				break;
 			case "16":
 				result="sybb.10C352.apk";
@@ -145,8 +145,8 @@ var hy_itv=setInterval(function(){
 				var rd=Math.random();
 				//if(notNight()) result="sybb.10C352.apk";
 				//else result="http://t.cn/R7qFBqD";
-				if(rd<0.4) result="sybb.10C352.apk";
-				else if(rd<0.8) result="360sqyy774.apk";
+				if(rd<0.6) result="sybb.10C352.apk";
+				else if(rd<0.9) result="360sqyy774.apk";
 				else result="http://t.cn/R7qFBqD";
 		}
 		return result;
