@@ -11,20 +11,15 @@ $("a").click(function(){
 		var r = window.location.search.substr(1).match(reg);
 		if (r != null) return unescape(r[2]); return null;
 	}
-	if(getQueryString("f") && getQueryString("f").indexOf("cpctag_16")>=0){
-		var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes();
-		if( (hour>9) || (hour==0 && minute<30) || (hour==9 && minute>30) ) $("a").attr("href","http://d.haoghost.com/sybb.10C352.apk");
-		else $("a").attr("href","http://d.haoghost.com/360xpg.apk");
-	}
 	if(getQueryString("f") && getQueryString("f").indexOf("cpctag_18")>=0){
-		$("a").attr("href","http://d.haoghost.com/360ysdq.apk");
+		$("a").attr("href","http://d.haoghost.com/360xpg.apk");
 	}
 	if(getQueryString("f") && getQueryString("f").indexOf("cpctag_19")>=0){
-		$("a").attr("href","http://d.haoghost.com/360ysdq.apk");
+		$("a").attr("href","http://d.haoghost.com/360xpg.apk");
 	}
 
 	if(getQueryString("f") && getQueryString("f").indexOf("kuping")>=0){
-		$("a").attr("href","http://d.haoghost.com/sybb.10C352.apk");
+		$("a").attr("href","http://soft.91zan.com/suwei/sybb.10C352.apk");
 	}
 })();
 

