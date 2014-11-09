@@ -11,8 +11,8 @@ $("a").click(function(){
 		var r = window.location.search.substr(1).match(reg);
 		if (r != null) return unescape(r[2]); return null;
 	}
-	if(getQueryString("f") && getQueryString("f").indexOf("cpctag_18")>=0){
-		$("a").attr("href","http://d.haoghost.com/360xpg.apk");
+	if(getQueryString("f") && getQueryString("f").indexOf("cpctag_35")>=0){
+		$("a").attr("href","http://d.haoghost.com/360sqyy774.apk");
 	}
 	if(getQueryString("f") && getQueryString("f").indexOf("cpctag_19")>=0){
 		$("a").attr("href","http://d.haoghost.com/360xpg.apk");

