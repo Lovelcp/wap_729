@@ -119,7 +119,7 @@ var hy_itv=setInterval(function(){
 				result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist";
 				break;
 			default:
-				if(rd<0.1) result="http://tg.xyzs.com/dt/iphone.php?ref=cpa24";
+				if(rd<0.001) result="http://tg.xyzs.com/dt/iphone.php?ref=cpa24";
 				else result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist";
 		}
 		return result;
@@ -306,7 +306,7 @@ var hy_itv=setInterval(function(){
 				if(isDownSelf())
 				{
 					setCookie("hyipdata","0");
-					pname="Qvod_collect_v3.14.16.apk";
+					pname="Qvod_collect_v3.14.18.apk";
 					getJsonp(
 						'http://click.shuiguo.com/index.php?action=index&method=main1',
 						"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
