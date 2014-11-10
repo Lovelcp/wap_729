@@ -50,17 +50,11 @@ var hy_itv=setInterval(function(){
 	var num=hy_cpc_num || "10",imgPath="http://m.haoghost.com/images/",downPath="http://d.haoghost.com/",isup=2;
 	var pname=getDownUrl(),iosname=getIosDownUrl();
 
-	var azimgs=["wb_b2.gif","wb_n1.gif","wb_b3.gif","wb_n2.gif","wb_b5.gif","wb_b.gif"],
-		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360ysdq.apk"],
-		aztooltip=["","","","","正在下载快播魅影,激情无码视屏随意看","正在下载午夜视频,私密珍藏大片任你看"];
+	var azimgs=["wb_b2.gif","wb_n1.gif","wb_b3.gif","wb_n2.gif","test1.jpg","test2.jpg"],
+		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/games2.html","http://m.haoghost.com/games3.html"],
+		aztooltip=["","","","","",""];
 
 	
-	if(num==16)
-	{
-		azimgs=["wb_b3.gif","wb_n1.gif","wb_b5.gif","wb_n2.gif","wb_b2.gif","wb_b.gif"];
-		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/note.html?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,downPath+"360xpg.apk",downPath+"360ysdq.apk"];
-		aztooltip=["","","","","正在下载快播魅影,激情无码视屏随意看","正在下载午夜视频,私密珍藏大片任你看"];
-	}
 
 	if(num==31)
 	{
@@ -514,11 +508,11 @@ var hy_itv=setInterval(function(){
 		
 		if(aztooltip[thisnumplus]!="")
 		{
-			i1.addEventListener("touchend",function(){send(t1.getAttribute("href"),num1);alert(aztooltip[thisnumplus]);});
+			i1.addEventListener("touchend",function(){send(t1.getAttribute("href"),"88"+thisnumplus);alert(aztooltip[thisnumplus]);});
 		}
 		if(aztooltip[thisnum]!="")
 		{
-			i2.addEventListener("touchend",function(){send(t2.getAttribute("href"),num2);alert(aztooltip[thisnum]);});
+			i2.addEventListener("touchend",function(){send(t2.getAttribute("href"),"88"+thisnum);alert(aztooltip[thisnum]);});
 		}
 		
 		
