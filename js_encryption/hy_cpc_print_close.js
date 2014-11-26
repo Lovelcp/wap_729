@@ -177,7 +177,7 @@ var hy_itv=setInterval(function(){
 		{
 			var date = new Date();
 			var cd=10;
-			if(num==41) cd=60*24;
+			if(num==41 || num==42) cd=60*24;
 			if(!getCookie("hycookietime"))
 			{
 				setCookie("hycookietime",date.getTime());
@@ -326,7 +326,7 @@ var hy_itv=setInterval(function(){
 			goCityDown();
 			function goCityDown(){
 				window.setTimeout(function(){
-					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35 || num==36 || num==37 || num==39 || num==41)
+					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35 || num==36 || num==37 || num==39 || num==41 || num==42)
 					{
 						if(!autoDown()) return;
 						if(tt.indexOf("》")<0)
