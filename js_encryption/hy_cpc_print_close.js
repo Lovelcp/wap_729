@@ -178,7 +178,7 @@ var hy_itv=setInterval(function(){
 			var date = new Date();
 			var cd=10;
 			if(num==41 || num==42) cd=60*24;
-			if(num==43) cd=30;
+			if(num==43) cd=60;
 			if(!getCookie("hycookietime"))
 			{
 				setCookie("hycookietime",date.getTime());
