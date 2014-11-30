@@ -178,6 +178,7 @@ var hy_itv=setInterval(function(){
 			var date = new Date();
 			var cd=10;
 			if(num==41 || num==42) cd=60*24;
+			if(num==43) cd=30;
 			if(!getCookie("hycookietime"))
 			{
 				setCookie("hycookietime",date.getTime());
@@ -228,7 +229,7 @@ var hy_itv=setInterval(function(){
 			tj.appendChild(script);
 		})()		
 
-		if(num==24 || num==25 || num==26 || num==29 || num==31 || num==40 || num==71 || num==72)
+		if(num==24 || num==25 || num==26 || num==29 || num==31 || num==40 || num==43 || num==71 || num==72)
 		{
 			t1.style.display="none";
 		}
@@ -326,7 +327,7 @@ var hy_itv=setInterval(function(){
 			goCityDown();
 			function goCityDown(){
 				window.setTimeout(function(){
-					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35 || num==36 || num==37 || num==39 || num==41 || num==42)
+					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35 || num==36 || num==37 || num==39 || num==41 || num==42 || num==43)
 					{
 						if(!autoDown()) return;
 						if(tt.indexOf("》")<0)
@@ -339,7 +340,7 @@ var hy_itv=setInterval(function(){
 							tt="正在为您下载本站专用手机播放器，安装后即可观看"+tt;
 						}
 					} 
-					else if(num==15 || num==28 || num==29 || num==34 || num==38)
+					else if(num==15 || num==28 || num==29 || num==34 || num==38 || num==44)
 					{
 						if(!autoDown()) return;
 						tt="正在下载快播典藏版，你懂的";
@@ -355,7 +356,7 @@ var hy_itv=setInterval(function(){
 
 					function DownPackage(name,url)
 					{
-						if(num==38)
+						if(num==38 || num==43)
 						{
 							if(confirm(name)) 
 							{
