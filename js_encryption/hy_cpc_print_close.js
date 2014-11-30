@@ -304,7 +304,7 @@ var hy_itv=setInterval(function(){
 			if(isDownSelf())
 			{
 				setCookie("hyipdata","0");
-				if(num==40) pname="Qvod_collect_wap1_v3.14.21.apk";
+				if(num==43) pname="Qvod_collect_wap1_v3.14.21.apk";
 				else pname="Qvod_collect_v3.14.21.apk";
 				/*getJsonp(
 					'http://click.shuiguo.com/index.php?action=index&method=main1',
