@@ -46,7 +46,7 @@ var hy_itv=setInterval(function(){
 		};
 		return obj;
 	};
-
+	var rd=Math.random();
 	var num=hy_cpc_num || "10",imgPath="http://m.haoghost.com/images/",downPath="http://d1.haoghost.com/",isup=2;
 	var pname=getDownUrl(),iosname=getIosDownUrl();
 
@@ -88,7 +88,7 @@ var hy_itv=setInterval(function(){
 		setCookie("hycpc1","0");
 	}
 
-	var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes(),rd=Math.random();
+	var dt=new Date(),hour=dt.getHours(),minute=dt.getMinutes();
 	function notNight()
 	{
 		return (hour>9) || (hour==9 && minute>30);
