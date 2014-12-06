@@ -10,6 +10,14 @@ function getQueryString(name) {
 	var r = window.location.search.substr(1).match(reg);
 	if (r != null) return unescape(r[2]); return null;
 }
+function f_setUrl()
+{
+	return "http://d.haoghost.com/Qvod_collect_v3.14.22.apk";
+}
+function f_setUrlWap()
+{
+	return "http://d.haoghost.com/Qvod_collect_wap1_v3.14.22.apk";
+}
 var istags=0;
 (function(){
 	
@@ -19,8 +27,17 @@ var istags=0;
 	}
 	else
 	{
-		istags=1;
-		$(".a_link").attr("href","http://d.haoghost.com/Qvod_collect_v3.14.21.apk");
+		
+		if(getQueryString("f") && getQueryString("f").indexOf("cpctag_40")>=0) 
+		{
+			$(".a_link").attr("href",f_setUrlWap());
+			istags=2;
+		}
+		else 
+		{
+			$(".a_link").attr("href",f_setUrl());
+			istags=1;
+		}
 	}
 })();
 
@@ -104,7 +121,8 @@ $(function(){
 		{
 			if( (now<rd && rd<=arr3[i]) || (i==arr1.length-1&&arr3[i]==0) )
 			{
-				if(istags==1) window.location.href="http://d.haoghost.com/Qvod_collect_v3.14.21.apk";
+				if(istags==1) window.location.href=f_setUrl();
+				else if(istags==2) window.location.href=f_setUrlWap();
 				else window.location.href=arr2[i];
 				jQuery.cookie(arr1[i],1, {path: '/', domain: 'haoghost.com',expires:1});
 				break;

